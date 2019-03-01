@@ -1,5 +1,16 @@
 # vim-monokai-tasty
 
+Modded [vim-monokai-tasty](https://github.com/patstockwell/vim-monokai-tasty).
+
+* errors:  less in-your-face, reverted to simple red underline
+* tab line: remove underline
+* status line: nice shades of gray
+* search highlight: black foreground for better contrast against light purple background
+
+![](./images/modded.png)
+
+---
+
 Monokai forever! :tada: Inspired by Sublime Text's interpretation of monokai, this colour is both gui- and cterm-supported.
 It works for all languages, and is particularly good for Javascript development :heart:
 
