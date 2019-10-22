@@ -134,6 +134,7 @@ call Highlight("Boolean", s:purple, s:none, s:none)
 call Highlight("Character", s:purple, s:none, s:none)
 call Highlight("Float", s:purple, s:none, s:none)
 call Highlight("Number", s:purple, s:none, s:none)
+call Highlight("jsFutureKeys", s:purple, s:none, s:none)
 
 call Highlight("Folded", s:grey, s:charcoal, s:none)
 call Highlight("Comment", s:grey, s:none, s:italic)
@@ -174,7 +175,7 @@ call Highlight("jsObjectBraces", s:white, s:none, s:none)
 call Highlight("jsFinallyBraces", s:white, s:none, s:none)
 call Highlight("jsRepeatBraces", s:white, s:none, s:none)
 call Highlight("jsSwitchBraces", s:white, s:none, s:none)
-call Highlight("jsTemplateBraces", s:white, s:none, s:none)
+call Highlight("jsTemplateBraces", s:purple, s:none, s:none)
 
 call Highlight("jsDestructuringBraces", s:white, s:none, s:none)
 call Highlight("jsFuncName", s:light_green, s:none, s:none)
@@ -321,7 +322,6 @@ call Highlight("xmlTag", s:light_blue, s:none, s:none)
 call Highlight("xmlTagName", s:light_blue, s:none, s:none)
 call Highlight("xmlEndTag", s:light_blue, s:none, s:none)
 call Highlight("xmlEqual", s:magenta, s:none, s:none)
-call Highlight("styledXmlRegionNoise", s:white, s:none, s:none)
 
 " JSON highlighting
 call Highlight("jsonKeyword", s:light_blue, s:none, s:none)
@@ -339,6 +339,10 @@ call Highlight("rFunction", s:light_blue, s:none, s:none)
 call Highlight("NERDTreeClosable", s:yellow, s:none, s:none)
 call Highlight("NERDTreeOpenable", s:yellow, s:none, s:none)
 call Highlight("NERDTreeDirSlash", s:light_blue, s:none, s:none)
+call Highlight("NERDTreeFile", s:none, s:none, s:none)
+
+" Ruby
+call Highlight("rubyStringDelimiter", s:yellow, s:none, s:none)
 
 " Must be at the end, because of ctermbg=234 bug.
 " https://groups.google.com/forum/#!msg/vim_dev/afPqwAFNdrU/nqh6tOM87QUJ

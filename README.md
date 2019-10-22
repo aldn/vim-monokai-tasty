@@ -14,6 +14,10 @@ Modded [vim-monokai-tasty](https://github.com/patstockwell/vim-monokai-tasty).
 Monokai forever! :tada: Inspired by Sublime Text's interpretation of monokai, this colour is both gui- and cterm-supported.
 It works for all languages, and is particularly good for Javascript development :heart:
 
+Unlike other monokai implementations, `vim-monokai-tasty` targets named syntax groups from a variety of modern syntax group plugins (listed below). _*74% tastier than competitors_ :taco:
+
+*according to me
+
 ![](./images/example_main.png)
 
 ## :electric_plug: Installation
