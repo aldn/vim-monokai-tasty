@@ -34,8 +34,9 @@ let s:light_grey = { "cterm": 250, "gui": "#bcbcbc" }
 let s:grey = { "cterm": 245, "gui": "#8a8a8a" }
 let s:dark_grey = { "cterm": 59, "gui": "#5f5f5f" }
 let s:darker_grey = { "cterm": 238, "gui": "#444444" }
-let s:light_charcoal = { "cterm": 238, "gui": "#292929" }
+let s:light_charcoal = { "cterm": 238, "gui": "#303030" }
 let s:charcoal = { "cterm": 235, "gui": "#262626" }
+let s:black = { "cterm": 0, "gui": "#1a1a1a" }
 
 let s:danger = { "cterm": 197, "gui": "#ff005f" }
 let s:olive = { "cterm": 64, "gui": "#5f8700" }
@@ -62,7 +63,7 @@ endfunction
 
 call Highlight("Normal", s:white, s:charcoal, s:none)
 
-call Highlight("Cursor", s:charcoal, s:light_blue, s:none)
+call Highlight("Cursor", s:charcoal, s:none, s:none)
 call Highlight("Special", s:purple, s:none, s:none)
 call Highlight("Title", s:white, s:none, s:bold)
 
@@ -71,21 +72,21 @@ call Highlight("DiffText", s:white, s:light_sea_blue, s:none)
 call Highlight("DiffDelete", s:dark_red, s:blood_red, s:none)
 call Highlight("DiffAdd", s:white, s:dark_green, s:none)
 
-" call Highlight("Error", s:white, s:danger, s:none)
-" call Highlight("ErrorMsg", s:white, s:danger, s:none)
-" call Highlight("WarningMsg", s:white, s:danger, s:none)
-" call Highlight("SpellBad", s:white, s:danger, s:none)
-" call Highlight("SpellRare", s:white, s:danger, s:none)
-" call Highlight("SpellCap", s:charcoal, s:orange, s:italic)
-" call Highlight("SpellLocal", s:charcoal, s:orange, s:italic)
+call Highlight("Error", s:white, s:danger, s:none)
+call Highlight("ErrorMsg", s:white, s:danger, s:none)
+call Highlight("WarningMsg", s:white, s:danger, s:none)
+call Highlight("SpellBad", s:white, s:danger, s:none)
+call Highlight("SpellRare", s:white, s:danger, s:none)
+call Highlight("SpellCap", s:charcoal, s:orange, s:italic)
+call Highlight("SpellLocal", s:charcoal, s:orange, s:italic)
 
-call Highlight("CursorLineNR", s:yellow, s:none, s:none)
+call Highlight("CursorLineNR", s:yellow, s:black, s:none)
 
 call Highlight("CursorColumn", s:none, s:darker_grey, s:none)
 call Highlight("ColorColumn", s:none, s:light_charcoal, s:none)
 call Highlight("Conceal", s:none, s:none, s:none)
-call Highlight("CursorLine", s:none, s:darker_grey, s:none)
-call Highlight("Type", s:none, s:none, s:none)
+call Highlight("CursorLine", s:none, s:black, s:none)
+call Highlight("Type", s:light_blue, s:none, s:none)
 
 call Highlight("Visual", s:none, s:dark_grey, s:none)
 call Highlight("TabLine", s:light_grey, s:dark_grey, s:none)
@@ -98,12 +99,13 @@ call Highlight("NonText", s:darker_grey, s:none, s:none)
 call Highlight("TabLineFill", s:none, s:darker_grey, s:none)
 call Highlight("LineNr", s:darker_grey, s:none, s:none)
 call Highlight("VertSplit", s:darker_grey, s:charcoal, s:none)
-" call Highlight("StatusLine", s:white, s:dark_grey, s:bold)
-call Highlight("StatusLine", s:charcoal, s:light_grey, s:bold)
-call Highlight("StatusLineNC", s:charcoal, s:grey, s:none)
+call Highlight("StatusLine", s:charcoal, s:white, s:bold)
+call Highlight("StatusLineNC", s:charcoal, s:grey, s:bold)
 
 call Highlight("Exception", s:magenta, s:none, s:bold)
 call Highlight("MatchParen", s:magenta, s:none, s:bold_underline)
+call Highlight("MatchParenCur", s:white, s:none, s:bold_underline)
+call Highlight("MatchWord", s:none, s:none, s:bold_underline)
 call Highlight("Include", s:magenta, s:none, s:none)
 call Highlight("Conditional", s:magenta, s:none, s:none)
 call Highlight("Define", s:magenta, s:none, s:none)
@@ -117,18 +119,18 @@ call Highlight("Statement", s:magenta, s:none, s:none)
 call Highlight("Repeat", s:magenta, s:none, s:none)
 
 call Highlight("SpecialKey", s:dark_grey, s:darker_grey, s:none)
-call Highlight("IncSearch", s:light_charcoal, s:purple, s:bold_underline)
-call Highlight("Search", s:light_charcoal, s:purple, s:bold_underline)
+call Highlight("IncSearch", s:light_charcoal, s:purple, s:bold)
+call Highlight("Search", s:light_charcoal, s:purple, s:bold)
 
-call Highlight("Identifier", s:light_blue, s:none, s:none)
-call Highlight("Question", s:light_blue, s:none, s:none)
-call Highlight("StorageClass", s:light_blue, s:none, s:italic)
-call Highlight("Structure", s:light_blue, s:none, s:none)
+call Highlight("Identifier", s:orange, s:none, s:none)
+call Highlight("Question", s:orange, s:none, s:bold)
+call Highlight("StorageClass", s:orange, s:none, s:none)
+call Highlight("Structure", s:orange, s:none, s:none)
 
 call Highlight("Function", s:light_green, s:none, s:none)
 
 call Highlight("Constant", s:purple, s:none, s:none)
-call Highlight("Directory", s:purple, s:none, s:none)
+call Highlight("Directory", s:light_blue, s:none, s:none)
 call Highlight("Tag", s:purple, s:none, s:none)
 call Highlight("Boolean", s:purple, s:none, s:none)
 call Highlight("Character", s:purple, s:none, s:none)
@@ -314,7 +316,7 @@ call Highlight("graphqlType", s:purple, s:none, s:none)
 call Highlight("vimParenSep", s:white, s:none, s:bold)
 call Highlight("vimOperParen", s:light_blue, s:none, s:italic)
 call Highlight("vimUserFunc", s:purple, s:none, s:none)
-call Highlight("vimFunction", s:orange, s:none, s:none)
+call Highlight("vimFunction", s:light_green, s:none, s:none)
 
 " XML highlighting.
 hi def link xmlTodo   Todo
@@ -338,8 +340,9 @@ call Highlight("rFunction", s:light_blue, s:none, s:none)
 " NERDTree highlighting
 call Highlight("NERDTreeClosable", s:yellow, s:none, s:none)
 call Highlight("NERDTreeOpenable", s:yellow, s:none, s:none)
-call Highlight("NERDTreeDirSlash", s:light_blue, s:none, s:none)
+call Highlight("NERDTreeDirSlash", s:orange, s:none, s:none)
 call Highlight("NERDTreeFile", s:none, s:none, s:none)
+call Highlight("NERDTreeRO", s:light_grey, s:dark_grey, s:none)
 
 " Ruby
 call Highlight("rubyStringDelimiter", s:yellow, s:none, s:none)
